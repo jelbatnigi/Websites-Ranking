@@ -4,6 +4,21 @@ The backend application uses the following technologies
 -SpringBoot
 -MySQL
 
+The application contains 2 main java services
+1# Is the file upload service which is running i a seprate JVM waiting for a file to arrive and then uploaded to DB.
+2# Is the main application service running as service container
+
+# File Upload Service
+This service run using the following jar
+siterank-upload-service-0.0.1-SNAPSHOT.jar
+
+Which basically runs a java program that listes to incoming csv file to a file system specified by you. Once the file arrives, It loads it to the DB and delete it.
+
+To run that service you need to pas in the DB parameters and the location of the file system
+Example
+java -jar -DDB_DRIVER=com.mysql.jdbc.Driver -DDB_CONNECTION=jdbc:mysql://localhost:3306/SiteRank -DDB_USER=root -DDB_PASSWORD=root -Dfile=./data.csv siterank-upload-service-0.0.1-SNAPSHOT.jar
+
+# Websites-Ranking
 To run the applicaiton you need to have the following
 MYSQL database
 Java 8
