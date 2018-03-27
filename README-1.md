@@ -18,7 +18,7 @@ To run that service you need to pas in the DB parameters and the location of the
 Example
 java -jar -DDB_DRIVER=com.mysql.jdbc.Driver -DDB_CONNECTION=jdbc:mysql://localhost:3306/SiteRank -DDB_USER=root -DDB_PASSWORD=root -Dfile=./data.csv siterank-upload-service-0.0.1-SNAPSHOT.jar
 
-# Websites-Ranking
+# Websites-Ranking Service
 To run the applicaiton you need to have the following
 MYSQL database
 Java 8
