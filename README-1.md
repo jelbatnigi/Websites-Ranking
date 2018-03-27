@@ -62,3 +62,6 @@ It takes application/json as content-type header
 It returns the same results as previous service a JSON of the top 5 sites and its ranking
 
 {"google.com.au":171842376,"facebook.com":123831275,"youtube.com":69327140,"google.com":29422150,"ninemsn.com.au":24521168}
+
+Exclusded sites:
+Each service will call another servicec called execludedSitesService to fetch the excluded sites within the date provided and will be excluded from the the list.
