@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,7 @@ public class RankController {
 	 * @param date
 	 * @return
 	 */
+	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping("/ranksite-1/{date}")
 	public Map<String, Long> getTopRanksSorted(@PathVariable String date) {
 		Map<String, Long> map = rankService.gettopFiveRanksSorted(date);
@@ -31,6 +33,7 @@ public class RankController {
 	 * @param date
 	 * @return
 	 */
+	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping("/ranksite-2/{date}")
 	public Map<String, Long> getTopRanksList(@PathVariable String date) {
 		Map<String, Long> map = rankService.getAllRanksByDate(date);
